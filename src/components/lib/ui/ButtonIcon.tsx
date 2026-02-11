@@ -2,7 +2,7 @@ import { Button } from '@mui/material'
 import type { ButtonProps } from '@mui/material'
 import React from 'react'
 
-type ButtonIconProps = {
+type ButtonIconProps = ButtonProps & {
   variant: ButtonProps['variant']
   startIcon?: React.ReactNode
   endIcon?: React.ReactNode
@@ -10,9 +10,9 @@ type ButtonIconProps = {
   color?: ButtonProps['color']
 }
 
-const ButtonIcon = ({ variant, startIcon, endIcon, text, color }: ButtonIconProps) => {
+const ButtonIcon = ({ variant, startIcon, endIcon, text, color, ...props }: ButtonIconProps) => {
   return (
-    <Button variant={variant} startIcon={startIcon} endIcon={endIcon} color={color}>
+    <Button variant={variant} startIcon={startIcon} endIcon={endIcon} color={color} {...props}>
       {text}
     </Button>
   )

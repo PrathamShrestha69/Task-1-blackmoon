@@ -19,6 +19,7 @@ import LogoutIcon from '@mui/icons-material/Logout'
 import React, { useState } from 'react'
 import DrawerMenu from '../lib/ui/DrawerMenu'
 import SearchBar from '../lib/ui/SearchBar'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 
 type DrawerItem = {
   text: string
@@ -57,10 +58,11 @@ const defaultPrimaryItems: DrawerItem[] = [
   { text: 'Home', href: '/', icon: <HomeIcon /> },
   { text: 'About', href: '/#', icon: <InfoIcon /> },
   { text: 'Services', href: '/#', icon: <BuildIcon /> },
-  { text: 'Contact', href: '/#', icon: <ContactMailIcon /> },
+  { text: 'Shop', href: '/shop', icon: <ContactMailIcon /> },
 ]
 
 const defaultSecondaryItems: DrawerItem[] = [
+  { text: 'Cart', href: '/cart', icon: <ShoppingCartIcon /> },
   { text: 'Settings', onClick: () => console.log('Settings clicked'), icon: <SettingsIcon /> },
   { text: 'Profile', onClick: () => console.log('Profile clicked'), icon: <PersonIcon /> },
   { text: 'Logout', onClick: () => console.log('Logout clicked'), icon: <LogoutIcon /> },
